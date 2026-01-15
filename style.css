@@ -187,3 +187,9 @@ th, td {
   font-weight: bold;
   margin-top: 15px;
 }
+
+#results h2 {
+  font-size: 36px;     /* increase size */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
