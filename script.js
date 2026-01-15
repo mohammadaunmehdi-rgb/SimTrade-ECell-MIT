@@ -198,6 +198,14 @@ function endGame() {
   } else {
   netPL.innerText = `Net Earning: -$${Math.abs(totalPL).toFixed(0)}`;
   netPL.style.color = "#ef4444";
+
+  // Scroll to absolute bottom when game ends
+  setTimeout(() => {
+  window.scrollTo({ 
+    top: document.body.scrollHeight,
+    behavior: "smooth"
+  });
+  }, 100);  
   }
 }
 
