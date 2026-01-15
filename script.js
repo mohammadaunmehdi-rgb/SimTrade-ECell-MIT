@@ -205,7 +205,7 @@ function endGame() {
     top: document.body.scrollHeight,
     behavior: "smooth"
   });
-  }, 100);  
+  }, 500);  
   }
 }
 
@@ -250,3 +250,4 @@ function restartGame() {
   window.scrollTo(0, 0);   // force scroll to top
   location.reload();
 }
+
