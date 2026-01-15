@@ -1,0 +1,189 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+#topBar {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  font-size: 60px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.stockCard {
+  border: 1px solid #334155;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+canvas {
+  background: #020617;
+  border: 1px solid #334155;
+  display: block;
+  margin: 10px auto;
+}
+
+button {
+  padding: 6px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy { 
+  background: #16a34a; 
+}
+.sell { background: #ef4444; }
+
+.hidden { display: none; }
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  border: 1px solid #334155;
+  padding: 8px;
+}
+
+#startBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#countdown {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 500px;
+  z-index: 200;
+  pointer-events: auto;
+}
+
+#countdown.hidden {
+  display: none;
+}
+
+#branding {
+  position: relative;
+  display: flex;
+  gap: 14px;
+
+  /* move to right edge */
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 10px;
+
+  /* keep exact vertical position */
+  margin-top: -350px;
+  margin-bottom: 300px;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+#branding img {
+  height: 390px;
+  width: auto;
+  border-radius: 12px;
+  background: #020617;
+  display: block;
+}
+
+#branding img:last-child {
+  height: 400px;   /* increase size */
+}
+
+#branding img:last-child {
+  position: relative;
+  top: -5px;   /* move up */
+}
+
+#imgTopLeft {
+  position: absolute;
+  border-radius: 12px;
+  top: 10px;
+  left: 10px;
+  height: 120px;
+  z-index: 50;
+}
+
+#results button {
+  font-size: 20px;
+  padding: 12px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 15px;  
+}
+
+#startBtn {
+  font-size: 20px;        /* bigger text */
+  padding: 12px 28px;     /* bigger button */
+  border-radius: 12px;  /* fully rounded */
+  cursor: pointer;
+}
+
+#durationInput {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  border-radius: 10px;
+
+  height: 38px;              /* 👈 set a fixed height */
+  line-height: 38px;         /* 👈 match line-height to height */
+
+  padding: 0 10px;           /* 👈 remove vertical padding */
+  font-size: 16px;
+  text-align: center;
+
+  -moz-appearance: textfield;
+}
+
+#durationInput:focus {
+  outline: none;
+  border-color: #22c55e;      /* subtle green focus */
+}
+
+/* Remove number input arrows */
+#durationInput::-webkit-outer-spin-button,
+#durationInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#durationInput {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+#controlsRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+#netPL {
+  font-size: 32px;      /* increase size */
+  font-weight: bold;
+  margin-top: 15px;
+}

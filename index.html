@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Market Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body>
+
+  <img id="imgTopLeft" src="assets/img1.png" alt="Top Left Image">
+
+<div id="topBar">
+  ⏱ <span id="time">60</span>s
+</div>
+
+<h1>SimTrade with E-Cell @ MIT</h1>
+
+<div id="controlsRow">
+  <span>Duration (s):</span>
+  <input id="durationInput" type="number" value="60" min="1">
+  <button id="startBtn">Start</button>
+</div>
+
+<div id="countdown" class="hidden">
+  <span id="countNum">3</span>
+</div>
+
+<div id="grid"></div>
+
+<div id="branding">
+  <img src="assets/qr.png" alt="QR Code">
+  <img src="assets/img2.png" alt="Bottom Right Image">
+</div>
+
+<div id="results" class="hidden">
+  <h2>📊 Final Analysis</h2>
+  <table id="resultTable"></table>
+  <h3 id="netPL"></h3>
+  <button onclick="restartGame()">Restart</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
