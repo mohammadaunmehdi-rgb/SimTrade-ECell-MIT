@@ -196,15 +196,6 @@ th, td {
 
 @media (max-width: 768px) {
   #branding {
-    all: unset !important;
-    display: flex !important;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px auto !important;
-  }
-
-  #branding img {
-    height: 150px !important;
-    position: static !important;
+    display: none !important;
   }
 }
