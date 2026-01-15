@@ -194,8 +194,15 @@ th, td {
   margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
+@media (hover: none) and (pointer: coarse) {
   #branding {
     display: none !important;
+  }
+
+  #topBar {
+    position: fixed !important;
+    top: 10px !important;
+    right: 15px !important;
+    z-index: 1000;
   }
 }
