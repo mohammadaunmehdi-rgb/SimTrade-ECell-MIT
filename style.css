@@ -82,40 +82,32 @@ th, td {
   display: none;
 }
 
+#mainContent {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+}
+
+#grid {
+  min-width: 0; /* critical for zoom safety */
+}
+
 #branding {
-  position: relative;
   display: flex;
+  flex-direction: column;
   gap: 14px;
-
-  /* move to right edge */
-  justify-content: flex-end;
-  margin-left: auto;
-  margin-right: 10px;
-
-  /* keep exact vertical position */
-  margin-top: -350px;
-  margin-bottom: 300px;
-
-  z-index: 1;
-
+  padding: 20px;
+  align-self: flex-start;        /* THIS replaces -380px */
+  margin-top: -20px;         /* visual fine-tuning */
   pointer-events: none;
 }
 
 #branding img {
-  height: 390px;
+  max-height: 40vh;   /* scales with screen height */
   width: auto;
+  height: auto;
   border-radius: 12px;
   background: #020617;
-  display: block;
-}
-
-#branding img:last-child {
-  height: 400px;   /* increase size */
-}
-
-#branding img:last-child {
-  position: relative;
-  top: -5px;   /* move up */
 }
 
 #imgTopLeft {
@@ -196,7 +188,20 @@ th, td {
 
 @media (hover: none) and (pointer: coarse) {
   #branding {
-    display: none !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 20px;
+    padding: 10px;
+
+    align-self: stretch;
+  }
+
+  #branding img {
+    max-height: 120px;
+    width: auto;
   }
 
   #topBar {
