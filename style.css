@@ -188,20 +188,7 @@ th, td {
 
 @media (hover: none) and (pointer: coarse) {
   #branding {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 12px;
-
-    margin-top: 20px;
-    padding: 10px;
-
-    align-self: stretch;
-  }
-
-  #branding img {
-    max-height: 120px;
-    width: auto;
+    display: none !important;
   }
 
   #topBar {
@@ -218,3 +205,4 @@ th, td {
     margin-top: 140px;
   }
 }
+
