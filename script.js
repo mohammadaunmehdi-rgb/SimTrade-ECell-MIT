@@ -162,8 +162,19 @@ function updatePL(i) {
   }
 }
 
+function disableTrading() {
+  const buttons = document.querySelectorAll(".buy, .sell");
+  buttons.forEach(btn => {
+    btn.disabled = true;
+    btn.style.background = "#475569"; // grey
+    btn.style.cursor = "not-allowed";
+  });
+}
+
+
 function endGame() {
   clearInterval(timer);
+  disableTrading();
   results.classList.remove("hidden");
 
   let totalPL = 0;
