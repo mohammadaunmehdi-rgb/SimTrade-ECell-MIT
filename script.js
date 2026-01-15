@@ -250,4 +250,3 @@ function restartGame() {
   window.scrollTo(0, 0);   // force scroll to top
   location.reload();
 }
-
