@@ -196,17 +196,20 @@ th, td {
 
 @media (max-width: 768px) {
   #branding {
-    position: static;          /* remove overlap behavior */
-    margin: 20px auto;
+    position: static !important;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+
     justify-content: center;
     flex-wrap: wrap;
   }
 
   #branding img {
-    height: 200px;             /* shrink images on phone */
+    height: 180px;
   }
 
   #branding img:last-child {
-    top: 0;                    /* cancel upward shift */
+    top: 0 !important;
   }
 }
+
